@@ -1,0 +1,24 @@
+package pers.caijx.corejava.chapter13.map;
+
+/**
+ * Created by Administrator on 2017/9/17/017.
+ */
+public class Employee {
+
+    private final String name;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
