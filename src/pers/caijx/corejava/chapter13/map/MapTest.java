@@ -1,6 +1,7 @@
 package pers.caijx.corejava.chapter13.map;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 /**
@@ -14,6 +15,7 @@ public class MapTest {
         staff.put("567-24-2546",new Employee("Harry Hacker"));
         staff.put("157-62-7935",new Employee("Gary Cooper"));
         staff.put("456-62-5527",new Employee("Francesca Cruz"));
+        LinkedList<String> linkedList = new LinkedList<>();
         System.out.println(staff);
         staff.remove("567-24-2546");
         staff.put("456-62-5527",new Employee("Caijx"));
