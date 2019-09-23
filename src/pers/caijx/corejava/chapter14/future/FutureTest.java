@@ -5,10 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 /**
  * Created by Administrator on 2017/11/19/019.
@@ -27,10 +24,12 @@ public class FutureTest {
         Thread t = new Thread(task);
         t.start();
         try {
-            System.out.println(task.get() + " matching files");
+            System.out.println(task.get(1, TimeUnit.SECONDS) + " matching files");
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
             e.printStackTrace();
         }
     }
