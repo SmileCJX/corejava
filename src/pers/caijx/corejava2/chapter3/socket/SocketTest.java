@@ -17,6 +17,7 @@ public class SocketTest {
     public static void main(String[] args) throws IOException {
         // 打开一个套接字
         try (Socket s = new Socket("time-A.timefreq.bldrdoc.gov",13)){
+            s.setSoTimeout(10000); // 设置套接字超时
             InputStream inputStream = s.getInputStream();
             Scanner in = new Scanner(inputStream);
 
