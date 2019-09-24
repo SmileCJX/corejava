@@ -60,6 +60,7 @@ class ThreadedEchoHandler implements Runnable {
                 while (!done && scanner.hasNextLine()) {
                     String line = scanner.nextLine();
                     printWriter.write("Echo:" + line);
+                    System.out.println("Echo:" + line); // 获取客户端的内容
                     if ("BYE".equals(line.trim())) {
                         done = true;
                     }
